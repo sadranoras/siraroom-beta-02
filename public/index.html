@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{site}</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="topbar"><div class="container">
+    <a class="brand" href="/" data-site-name></a>
+    <nav class="row" id="nav"></nav>
+  </div></header>
+
+  <section class="hero container">
+    <h1 id="hero-title"></h1>
+    <p id="hero-sub"></p>
+    <div class="row" style="justify-content:center">
+      <a class="btn primary" href="/login?tab=register" id="cta">شروع رایگان</a>
+      <a class="btn" href="#plans">مشاهده پلن‌ها</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="grid">
+      <div class="card feature"><div class="ico">🎥</div><h3>ویدیو و صدای باکیفیت</h3><p class="muted">کنفرانس چندنفره با ویدیو و صدای زنده و تنظیم خودکار کیفیت.</p></div>
+      <div class="card feature"><div class="ico">🖥️</div><h3>اشتراک صفحه</h3><p class="muted">نمایش صفحه، پنجره یا تب مرورگر برای همه شرکت‌کنندگان.</p></div>
+      <div class="card feature"><div class="ico">✏️</div><h3>وایت‌بورد مشترک</h3><p class="muted">نوشتن و ترسیم زنده روی تخته که همه همزمان می‌بینند.</p></div>
+      <div class="card feature"><div class="ico">💬</div><h3>چت و بالا بردن دست</h3><p class="muted">گفتگوی متنی و درخواست اجازه صحبت در کلاس‌های شلوغ.</p></div>
+      <div class="card feature"><div class="ico">⏺️</div><h3>ضبط جلسه</h3><p class="muted">ضبط جلسات و دسترسی به آرشیو از داشبورد.</p></div>
+      <div class="card feature"><div class="ico">🔐</div><h3>مدیریت دسترسی</h3><p class="muted">رمز اتاق، نقش میزبان/ارائه‌دهنده/شرکت‌کننده و حذف یا بی‌صدا کردن افراد.</p></div>
+    </div>
+  </section>
+
+  <section class="container" id="plans" style="padding-top:3rem">
+    <h2 style="text-align:center">پلن‌ها و قیمت‌ها</h2>
+    <div class="grid" id="plan-grid" style="margin-top:1.5rem"></div>
+  </section>
+
+  <footer class="footer container" id="footer"></footer>
+  <script type="module" src="/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# LiveKit server config — keys MUST match LIVEKIT_API_KEY / LIVEKIT_API_SECRET in .env
+port: 7880
+rtc:
+  tcp_port: 7881
+  udp_port: 7882          # single UDP port (open it in the firewall)
+  use_external_ip: true
+keys:
+  APIdUUPAE3y3gQJ: 4l67JjvyLUJ3tpLKMlkDY1X7SZlePsIOGNOfjY06cs3   # CHANGE in production (secret >= 32 chars)
+logging:
+  level: info

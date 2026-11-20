@@ -1,0 +1,26 @@
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --config /etc/livekit.yaml
+    network_mode: host          # recommended by LiveKit on Linux (needs UDP/TCP ports 7880, 7881, 7882)
+    restart: unless-stopped
+    volumes:
+      - ./livekit.yaml:/etc/livekit.yaml:ro
+
+  app:
+    build:
+      context: .
+      args:
+        WITH_OFFICE: ${WITH_OFFICE:-0}
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+      # the app reaches LiveKit's admin API through the host network
+      LIVEKIT_HTTP_URL: http://host.docker.internal:7880
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data

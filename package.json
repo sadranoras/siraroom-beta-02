@@ -1,0 +1,14 @@
+{
+  "name": "classroom-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted online classroom / web-conferencing platform with admin panel (Node.js + LiveKit)",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "dev": "node --no-warnings --watch server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
